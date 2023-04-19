@@ -1,0 +1,114 @@
+<!-- 
+Q1. Design a responsive website by use of modal, scrollspy, popover and perform collaboration on GitHub 
+--> 
+ 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Gaming Zone</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script> 
+</head> 
+<body class="bg-dark"> 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
+        <div class="container-fluid"> 
+          <a class="navbar-brand" href="#">Bentley classics</a> 
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon"></span> 
+          </button> 
+          <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+              <li class="nav-item"> 
+                <a class="nav-link text-dark" aria-current="page" href="#">Home</a> 
+              </li> 
+              <li class="nav-item"> 
+                <a class="nav-link text-dark" href="#">About Us</a> 
+              </li> 
+              <li class="nav-item"> 
+                <a class="nav-link text-dark" href="#">Contact Us</a> 
+              </li> 
+            </ul> 
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent"> 
+                <ul class="navbar-nav"> 
+                  <li class="nav-item"> 
+                    <a class="nav-link text-dark" aria-current="page" href="#">Login</a> 
+                  </li> 
+                  <li class="nav-item"> 
+                    <a class="nav-link text-dark" aria-current="page" href="#">Sign Up</a> 
+                  </li> 
+                  <li class="nav-item dropdown"> 
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Explore!</a> 
+                    <ul class="dropdown-menu"> 
+                        <li><a href="#section1" class="downdown-item">Valorant</a></li> 
+                        <li><a href="#section2" class="downdown-item">COD Warzone</a></li> 
+                        <li><a href="#section3" class="downdown-item">Fortnite</a></li> 
+                    </ul> 
+                  </li> 
+                </ul> 
+            </div> 
+        </div> 
+    </nav> 
+    <div class="container-fluid text-center text-white"> 
+        <h1 class="display-6 mt-3 mb-3">Get exposure to the classics of Bentley</h1> 
+        <p class="lead">Are you ready to take this challenge? Then let's not wait to rush on B to plant the spike and finish off with this battle</p> 
+        <button type="button" class="btn btn-primary mb-5 mt-2" data-bs-toggle="modal" data-bs-target="#myModal"> 
+            Let's Play 
+          </button> 
+    </div> 
+ 
+    <div id="section1" class="container-fluid-lg bg-success text-white" style="padding:100px 20px;"> 
+        <h1>Valorant</h1> 
+        <p>Valorant is game by RiotGames available for Free on RiotGames Client Application </p> 
+        <p>This game works on concept of magical abilities and gun fighting against the enemy and it has multiple agents with their different ability</p> 
+        <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Explore More" data-bs-content="For more visit riot games website"> 
+            Explore more ! 
+          </button> 
+      </div> 
+       
+      <div id="section2" class="container-fluid-lg bg-warning" style="padding:100px 20px;"> 
+        <h1>Call of Duty Warzone</h1> 
+        <p>This game is by Ubisoft available for Free on COD Client APplication</p> 
+        <p>This game works on concept of real world war-like situtation where player has different weapons from snipers to pistols against enemys</p> 
+        <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Explore More" data-bs-content="For more visit cod games website"> 
+            Explore more ! 
+          </button> 
+      </div> 
+       
+      <div id="section3" class="container-fluid-lg bg-secondary text-white" style="padding:100px 20px;"> 
+        <h1>Fortnite</h1> 
+        <p>This game is available for Free by Epic Games and available on Epic Games Client Application</p> 
+        <p>This game works on concept of cartoon characters with gun fight along with vehicle and real world like situtation during gun fight</p> 
+        <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Explore More" data-bs-content="For more visit epic games website"> 
+            Explore more ! 
+          </button> 
+      </div> 
+      <script> 
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]')) 
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) { 
+          return new bootstrap.Popover(popoverTriggerEl) 
+        }) 
+        </script> 
+<div class="modal" id="myModal"> 
+    <div class="modal-dialog"> 
+      <div class="modal-content"> 
+        <div class="modal-header"> 
+          <h4 class="modal-title">Website Information</h4> 
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button> 
+        </div> 
+ 
+        <div class="modal-body"> 
+          This website is created for gamers who are looking to explore new games and play and know more about it. If you are gamer then this website is for you! 
+        </div> 
+        <div class="modal-footer"> 
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button> 
+        </div> 
+   
+      </div> 
+    </div> 
+  </div> 
+</body> 
+</html>
